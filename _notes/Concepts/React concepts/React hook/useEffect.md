@@ -3,7 +3,7 @@
 3. deps none: function operate when the compnent re-render
 
 
-```js
+```jsx
 import React, { useEffect } from 'react';
 
 function User({ user, onRemove, onToggle }) {
