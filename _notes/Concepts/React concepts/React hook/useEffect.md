@@ -2,7 +2,7 @@
 2. deps dependency value exists: function operate when the first or selected value changes.
 3. deps none: function operate when the compnent re-render
 
-```yml
+```jsx
 import React, { useEffect } from 'react';
 
 function User({ user, onRemove, onToggle }) {
