@@ -1,0 +1,3 @@
+1. In web development, a route is a URL pattern that is associated with a specific function in the server-side code. When a client makes a request to the server using a specific URL, the server maps the URL to the corresponding route, which then invokes the associated function to handle the request. 
+
+2. The function performs any necessary operations (such as retrieving data from a database or calling another API) and returns a response, which is sent back to the client.

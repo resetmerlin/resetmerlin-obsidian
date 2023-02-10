@@ -1,4 +1,4 @@
-	```js
+```js
 import mongoose from "mongoose";
 
   
@@ -21,10 +21,11 @@ const connectDatabase = async () => {
 
 };
 
+```
   
 
 export default connectDatabase;
-```
+
 1. Before Making Database
 
 	 - We need to know what is a concept of  [[Asynchronous]] operation. Because what we will gonna do is to connect to the mongo database, which requires to use async operation.
