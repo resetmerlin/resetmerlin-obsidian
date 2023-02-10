@@ -1,4 +1,4 @@
-```js
+```jsx
 import {
   CYBER_USER_LOGIN_REQUEST,
   CYBER_USER_LOGIN_SUCCESS,
@@ -48,7 +48,7 @@ export const loginAction = (email, password) => async (dispatch) => {
 2. Steps
 	1. First we have to create [[User Constants]] for the action. [[Constants]] is important if u use as an action type in react-redux.
 	2. Second, we create [[Action creator]] to work just like an action but function.  When user logins, we want this action to be called. So we will name this action as 'loginAction'. This Action creator(function) will get email and password arguments. 
-	```js
+	```jsx
 export const loginAction = (email, password) => async (dispatch) => {
 
   try {
@@ -60,12 +60,12 @@ export const loginAction = (email, password) => async (dispatch) => {
 		use try, catch method to handle error while fetch api
 
 	3. Once user request this action, user will [[Dispatch]] the type from [[User Constants]].  
-	```js
+	```jsx
 	    dispatch({ type: CYBER_USER_LOGIN_REQUEST });
 ```
 
 	4. If this is dispatched action succeed, we will create variable name 'config' to define [[Content-type]] and [[MIME type]]. 
-	```js
+	```jsx
 	const config = {
       headers: {
         "Content-Type": "application/json",
@@ -74,7 +74,7 @@ export const loginAction = (email, password) => async (dispatch) => {
 ```
 
 	5. then, we will use [[axios]] to [[fetch api]]. When user logins, he/she submits email and password to the server right? According to [[HTTP request methods]], this method equals to post method. User will request body(email, password) to submit to 'url' or endpoint. 
-	```js
+	```jsx
 	const { data } = await axios.post(
 
       "/api/users/login",
@@ -96,12 +96,12 @@ export const loginAction = (email, password) => async (dispatch) => {
 ```
 
 		and request body is 
-	```js
+	```jsx
 { email, password },
 ```
 	
 	**last, this is the property(headers) from [[Axios config]].
-	```js
+	```jsx
   config
       //const config = {
       //headers: {
@@ -113,14 +113,14 @@ export const loginAction = (email, password) => async (dispatch) => {
 6. After fetching api using axios, we dispatch action if it succeed and we will payload the data that we get from the server(res). So the data we can get is defined by the backend. 
 
 7. We will also store this userInfo data in [[localStorage]]. 
-	```js
+	```jsx
 	 localStorage.setItem("userInfo", JSON.stringify(data));
 ```
 
 
 
 8. Whenever it has error, we will send action type which is login got failed.
-	```js
+	```jsx
 	 dispatch({
       type: CYBER_USER_LOGIN_FAIL,
       payload:

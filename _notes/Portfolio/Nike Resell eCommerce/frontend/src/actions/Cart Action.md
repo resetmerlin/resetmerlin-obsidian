@@ -2,7 +2,7 @@
 ## Current code
 
 This is from [[Cart Constans]]
-```js
+```jsx
 import {
 
   CYBER_CART_ADD_ITEM,
@@ -19,7 +19,7 @@ import {
 
 
  
-```js
+```jsx
 
 import axios from "axios";
 //action creator
@@ -33,7 +33,7 @@ export const addItemToCart = (id, qty) => async (dispatch, getState) => {
 ## From Store script 
 
 The whole state I refered from [[Store]] script 
-```js
+```jsx
 // this is from Store script
 const reducer = combineReducers({
   cyberProductLists: cyberProductReducers,
@@ -46,14 +46,14 @@ const reducer = combineReducers({
 
 and then we will fetch data by using [[axios]]
 	
-```js
+```jsx
   const { data } = await axios.get(`/api/cyberProducts${id}`);
 ```
 	It tells that we use get method to get data from server which is api call.
 
 
 after fetching data from server, we will [[Dispatch]] it specifically.
-```js
+```jsx
   dispatch({
 
     type: CYBER_CART_ADD_ITEM,
@@ -80,7 +80,7 @@ after fetching data from server, we will [[Dispatch]] it specifically.
 
 
 we will gonna make the data to store in the browser's [[localStorage]]
-```js
+```jsx
 
   localStorage.setItem("cyberCartItems",JSON.stringify(getState().cyberCart.cyberCartItems)
   );
@@ -90,7 +90,7 @@ we will gonna make the data to store in the browser's [[localStorage]]
 ## From Store script 
 
 to make this work, we have to set in the [[Store]] script
-```js
+```jsx
 const cartItemsFromStorage = localStorage.getItem("cyberCartItems")
 
   ? JSON.parse(localStorage.getItem("cyberCartItems"))

@@ -1,4 +1,4 @@
-```js
+```jsx
 import {
   CYBER_USER_LOGIN_REQUEST,
   CYBER_USER_LOGIN_SUCCESS,
@@ -39,7 +39,7 @@ export const cyberUserLoginReducers = (state = {}, action) => {
 
 
 	this code is from [[User action]].
-	```js
+	```jsx
     dispatch({ type: CYBER_USER_LOGIN_REQUEST });
 ```
 
@@ -47,7 +47,7 @@ export const cyberUserLoginReducers = (state = {}, action) => {
 	4. this [[Dispatch]], triggers action to update the state.  So when an action is excuted, it dispatch to the reducer and the reducer determine how the state of the application should be updated in response to that action.
 
 	5. If u look at the code cyberUserLoginReducers, it uses switch method to verify the case. When the case is equal as an action.type, it returns the new state.
-	```js
+	```jsx
 
 export const cyberUserLoginReducers = (state = {}, action) => {
   switch (action.type) {

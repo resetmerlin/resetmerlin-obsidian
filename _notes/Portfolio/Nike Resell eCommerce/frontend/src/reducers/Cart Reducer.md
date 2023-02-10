@@ -1,4 +1,4 @@
-```js
+```jsx
 import {
 
   CYBER_CART_ADD_ITEM,

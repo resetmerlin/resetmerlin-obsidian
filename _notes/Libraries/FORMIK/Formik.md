@@ -9,7 +9,7 @@
 	``` 
 
 	2.  Import Formik in react
-	```js
+	```jsx
 	import { Formik, Form, Field, ErrorMessage } from "formik";
 	```
 

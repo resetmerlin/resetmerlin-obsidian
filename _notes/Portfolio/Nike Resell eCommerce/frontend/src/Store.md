@@ -1,4 +1,4 @@
-```js
+```jsx
 
 import { createStore, combineReducers, applyMiddleware } from "redux";
 
@@ -66,7 +66,7 @@ export default store;
 
 1. Explaination:
 	1. The variable is defined using 'combineReducers' method from redux, and this combines multiple reducers into a single reducer for the entire application state.
-	```js
+	```jsx
 	const reducer = combineReducers({
 	  cyberProductLists: cyberProductReducers,
 	  cyberProductDetails: cyberProductDetailReducers,
@@ -78,7 +78,7 @@ export default store;
 		In this code, 'reducer' is composed of four reducers: 'cyberProductLists', 'cyberProductDetails', 'cyberCart', 'cyberLogin'
 
 	2. The initialState is an object that defines the initial state of the application.
-	```js
+	```jsx
 	const initialState = {
   cyberCart: {
     cyberCartItems: cartItemsFromStorage,
@@ -93,7 +93,7 @@ export default store;
 ```
 
 	3. The variable name 'middleware' is defined by using thunk from redux-thunk. It allows asynchronous actions in Redux
-	```js
+	```jsx
 	const middleware = [thunk];
 ```
 
@@ -101,12 +101,12 @@ export default store;
 	4. The variable store is created by using 'createStore' method from the 'redux' library. createStore takes 3 arguments, which is reducer, initialStatem enhancer.
 
 		this is an example of using creatStore
-		```js
+		```jsx
 	const store = createStore(myReducer, initialState, myEnhancer);
 ```
 
 	5.  This is a code that I got
-	```js
+	```jsx
 	const store = createStore(
 	  reducer,
 	  initialState,
