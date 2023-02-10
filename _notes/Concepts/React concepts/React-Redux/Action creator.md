@@ -7,7 +7,7 @@
 
 Here is an example:
 
-```js
+```jsx
 // Action
 const ADD_TODO = {
   type: "ADD_TODO",

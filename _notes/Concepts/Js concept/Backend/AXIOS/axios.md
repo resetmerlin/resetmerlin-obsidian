@@ -20,7 +20,7 @@ axios({
 
 	
 	`axios()`에 url을 전달해 요청할 수 있다. 선택적으로 `config` 객체를 2번째 인자로 추가 전달할 수 있다.
-```
+```js
 axios(url[, config])
 ```
 ```js
