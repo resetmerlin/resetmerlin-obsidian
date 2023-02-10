@@ -1,4 +1,4 @@
-```jsx
+```
 import CartList from "../components/CartList";
 
 import React, { useState, useEffect } from "react";
@@ -8,23 +8,23 @@ import {useParams, Link, useSearchParams, useLocation} from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 ```
 This is from [[Cart Action]]
-```jsx
+```
 import { cyberProductsAction } from "../actions/cyberProductActions";
 ```
 
 
-```jsx
+```
 const CartScreen = () => {
 
   const dispatch = useDispatch();
 ```
 
 - Before this We code to navigate to go to this Cart Screen
-```jsx
+```
     navigate(`/cart/${id}?qty=${qty}`);
 ```
 - Current URL : http://127.0.0.1:5173/cart/63bf630e02d1a3b301eeb75a?qty=1
-```jsx
+```
   const { id } = useParams();
 ```
 	If I use useParams(), and console.log the value, the result will be like this  
@@ -35,7 +35,7 @@ const CartScreen = () => {
 
 	
  - We can use  [[useLocation]] to get current locaton.   
-```jsx
+```
   const location = useLocation().search;
 ```
 
@@ -47,20 +47,20 @@ const CartScreen = () => {
 	
 - [[URLSearchParams]] will help to get the number of quantity
 
-```jsx
+```
   const qty = new URLSearchParams(location).get("qty");
   // Result will be 1
 ```
 
 - Now, we get the quantity that sent from previous screen. Next is get cyberCart states from store script
-```jsx
+```
   const cyberCart = useSelector((state) => state.cyberCart);
   
   const { cyberCartItems } = cyberCart;
 ```
 -  We check if the id(useParams) is true or not and then dispatch addItemToCart action. 
 
-```jsx
+```
   useEffect(() => {
 
     if (id) {
@@ -74,7 +74,7 @@ const CartScreen = () => {
 	pass the arguments id, qty.
 	
 
-```jsx
+```
    return (
 
     <>
